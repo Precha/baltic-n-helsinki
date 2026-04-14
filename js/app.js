@@ -278,12 +278,12 @@ const cityData = {
 
 // ---------- Build page ----------
 function buildPage() {
-  buildOverview();
-  buildTimeline();
-  buildCitySections();
-  buildCost();
-  buildFooter();
-  applyLang();
+  applyStaticTranslations(); // Apply nav/static text immediately, before any dynamic build
+  try { buildOverview(); } catch(e) { console.warn('buildOverview', e); }
+  try { buildTimeline(); } catch(e) { console.warn('buildTimeline', e); }
+  try { buildCitySections(); } catch(e) { console.warn('buildCitySections', e); }
+  try { buildCost(); } catch(e) { console.warn('buildCost', e); }
+  try { buildFooter(); } catch(e) { console.warn('buildFooter', e); }
 }
 
 // Fallback emoji per city for broken images
@@ -515,8 +515,9 @@ function buildFooter() {
 }
 
 // ---------- Language ----------
-function applyLang() {
+function applyStaticTranslations() {
   const t = i18n[currentLang];
+  if (!t) return;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     if (t[key] !== undefined) el.textContent = t[key];
@@ -524,12 +525,16 @@ function applyLang() {
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === currentLang);
   });
+}
+
+function applyLang() {
+  applyStaticTranslations();
   // Rebuild dynamic sections
-  buildOverview();
-  buildTimeline();
-  buildCitySections();
-  buildCost();
-  buildFooter();
+  try { buildOverview(); } catch(e) { console.warn('buildOverview', e); }
+  try { buildTimeline(); } catch(e) { console.warn('buildTimeline', e); }
+  try { buildCitySections(); } catch(e) { console.warn('buildCitySections', e); }
+  try { buildCost(); } catch(e) { console.warn('buildCost', e); }
+  try { buildFooter(); } catch(e) { console.warn('buildFooter', e); }
   // Restore tab events
   document.querySelectorAll('.city-tab').forEach(tab => {
     tab.addEventListener('click', () => {
