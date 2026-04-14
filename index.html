@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amber & Iron: SamMichelle's Northern Journey</title>
+  <meta name="description" content="Amber & Iron: Sammy & Michelle 的北歐波羅的海之旅 · 2026年4月">
+
+  <!-- Google Fonts: Inter + Noto Sans TC + Noto Sans KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =============================================
+       HEADER
+       ============================================= -->
+  <header id="site-header">
+    <a href="#" class="header-logo"><span>Amber &amp; Iron</span> · SamMichelle</a>
+
+    <nav>
+      <ul class="header-nav" id="main-nav">
+        <li><a href="#overview" data-i18n="navOverview">行程總覽</a></li>
+        <li><a href="#timeline" data-i18n="navTimeline">每日行程</a></li>
+        <li><a href="#vilnius" data-i18n="navVilnius">維爾紐斯</a></li>
+        <li><a href="#riga" data-i18n="navRiga">里加</a></li>
+        <li><a href="#tallinn" data-i18n="navTallinn">塔林</a></li>
+        <li><a href="#helsinki" data-i18n="navHelsinki">赫爾辛基</a></li>
+        <li><a href="#cost" data-i18n="navCost">費用</a></li>
+      </ul>
+    </nav>
+
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="zh" onclick="setLang('zh')">中文</button>
+      <button class="lang-btn" data-lang="ko" onclick="setLang('ko')">한국어</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+
+    <button class="nav-toggle" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- =============================================
+       HERO
+       ============================================= -->
+  <section id="hero">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ April 2026 · Baltic &amp; Helsinki ✦</div>
+
+      <h1 class="hero-title">
+        <span class="hero-title-top">Amber &amp; Iron</span>
+        <span class="hero-title-sub">Sam<span class="accent">Michelle</span>'s<br>Northern Journey</span>
+      </h1>
+
+      <p class="hero-dates" data-i18n="dates">2026年4月16日 — 4月26日</p>
+
+      <div class="city-chips">
+        <a href="#vilnius" class="city-chip">🇱🇹 Vilnius</a>
+        <a href="#riga" class="city-chip">🇱🇻 Riga</a>
+        <a href="#tallinn" class="city-chip">🇪🇪 Tallinn</a>
+        <a href="#helsinki" class="city-chip">🇫🇮 Helsinki</a>
+      </div>
+
+      <div class="hero-scroll">SCROLL</div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       OVERVIEW
+       ============================================= -->
+  <section id="overview" style="padding: 5rem 1.5rem;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div class="section-header">
+        <span class="section-label">The Journey</span>
+        <h2 class="section-title" data-i18n="overviewTitle">11天 · 4座城市 · 1段逃脫之旅</h2>
+      </div>
+      <div class="overview-grid" id="overview-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       TIMELINE
+       ============================================= -->
+  <section id="timeline">
+    <div class="timeline-inner">
+      <div class="section-header">
+        <span class="section-label">Day by Day</span>
+        <h2 class="section-title" data-i18n="timelineTitle">每日行程</h2>
+      </div>
+      <ul class="timeline-list" id="timeline-list">
+        <!-- Populated by JS -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CITY SECTIONS (populated by JS)
+       ============================================= -->
+  <div id="city-sections"></div>
+
+  <!-- =============================================
+       COST
+       ============================================= -->
+  <section id="cost">
+    <div style="max-width:700px; margin:0 auto;">
+      <div class="section-header">
+        <span class="section-label">Budget</span>
+        <h2 class="section-title" data-i18n="costTitle">費用估算</h2>
+        <p class="section-desc" data-i18n="costSubtitle">每人參考費用（不含已購機票）</p>
+      </div>
+      <div class="cost-table-wrap">
+        <div id="cost-table">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       FOOTER / TIPS
+       ============================================= -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="section-header">
+        <span class="section-label">Tips</span>
+        <h2 class="section-title" data-i18n="footerTips">實用資訊</h2>
+      </div>
+      <div class="tips-grid" id="tips-grid">
+        <!-- Populated by JS -->
+      </div>
+      <div class="footer-bottom">
+        <p><span id="made-with">為 Sammy &amp; Michelle 製作</span></p>
+        <p style="margin-top:0.4rem;">✈️ Apr 16 – Apr 26, 2026 &nbsp;·&nbsp; 🇱🇹 🇱🇻 🇪🇪 🇫🇮</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
