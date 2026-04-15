@@ -320,6 +320,7 @@ function buildPage() {
   try { buildCitySections(); } catch(e) { console.warn('buildCitySections', e); }
   try { buildCost(); } catch(e) { console.warn('buildCost', e); }
   try { buildFooter(); } catch(e) { console.warn('buildFooter', e); }
+  applyStaticTranslations(); // Re-apply at end to catch any late-rendered elements
 }
 
 // Fallback emoji per city for broken images
@@ -336,6 +337,8 @@ function buildOverview() {
   const t = i18n[currentLang];
   const grid = document.getElementById('overview-grid');
   if (!grid) return;
+  const ovTitle = document.querySelector('[data-i18n="overviewTitle"]');
+  if (ovTitle && t.overviewTitle) ovTitle.textContent = t.overviewTitle;
   // Use cityData heroImg as overview image source
   const keys = ['vilnius', 'riga', 'tallinn', 'helsinki'];
   grid.innerHTML = t.cities.map((c, i) => {
@@ -360,6 +363,8 @@ function buildTimeline() {
   const t = i18n[currentLang];
   const list = document.getElementById('timeline-list');
   if (!list) return;
+  const tlTitle = document.querySelector('[data-i18n="timelineTitle"]');
+  if (tlTitle && t.timelineTitle) tlTitle.textContent = t.timelineTitle;
   list.innerHTML = t.days.map((day, idx) => `
     <li class="timeline-item" data-city="${day.city}">
       <div class="timeline-dot">${idx + 1}</div>
@@ -528,6 +533,10 @@ function buildCost() {
   const t = i18n[currentLang];
   const wrap = document.getElementById('cost-table');
   if (!wrap) return;
+  const ctTitle = document.querySelector('[data-i18n="costTitle"]');
+  if (ctTitle && t.costTitle) ctTitle.textContent = t.costTitle;
+  const ctSub = document.querySelector('[data-i18n="costSubtitle"]');
+  if (ctSub && t.costSubtitle) ctSub.textContent = t.costSubtitle;
   wrap.innerHTML = t.costItems.map(item => `
     <div class="cost-row ${item.highlight ? 'highlight' : ''}">
       <span class="cost-label">${item.label}</span>
@@ -540,6 +549,8 @@ function buildFooter() {
   const t = i18n[currentLang];
   const grid = document.getElementById('tips-grid');
   if (!grid) return;
+  const ftTitle = document.querySelector('[data-i18n="footerTips"]');
+  if (ftTitle && t.footerTips) ftTitle.textContent = t.footerTips;
   grid.innerHTML = t.tipItems.map(tip => `
     <div class="tip-card">
       <span class="tip-icon">${tip.icon}</span>
@@ -557,9 +568,15 @@ function buildFooter() {
 function applyStaticTranslations() {
   const t = i18n[currentLang];
   if (!t) return;
+  // Generic data-i18n sweep
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     if (t[key] !== undefined) el.textContent = t[key];
+  });
+  // Explicit nav items (belt-and-suspenders)
+  ['navOverview','navTimeline','navVilnius','navRiga','navTallinn','navHelsinki','navCost'].forEach(key => {
+    const el = document.querySelector(`[data-i18n="${key}"]`);
+    if (el && t[key]) el.textContent = t[key];
   });
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === currentLang);
