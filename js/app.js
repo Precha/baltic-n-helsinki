@@ -28,6 +28,14 @@ const cityData = {
         badge1: '€8', badge1Type: 'amber', badge2: '30min bus', badge2Type: 'blue'
       },
       {
+        nameZh: 'Three Crosses Hill', nameKo: '세 개의 십자가 언덕', nameEn: 'Three Crosses Hill',
+        descZh: '維爾紐斯最震撼的景觀制高點，城市＋森林＋紅屋頂全景，很多人認為比城堡塔更美。',
+        descKo: '빌뉴스에서 가장 인상적인 전망 명소. 도시+숲+붉은 지붕 파노라마로 성탑보다 더 아름답다는 평도.',
+        descEn: 'Arguably the most stunning viewpoint in Vilnius — city, forest, and red rooftops all in one frame.',
+        img: 'https://images.unsplash.com/photo-1541772995-60d28c8feba3?w=600&q=80',
+        badge1: 'Free', badge1Type: 'green', badge2: 'Must See ⭐', badge2Type: 'purple'
+      },
+      {
         nameZh: 'Užupis 藝術共和國', nameKo: '우주피스 예술 공화국', nameEn: 'Užupis Republic',
         descZh: '維爾紐斯的波希米亞藝術區，自我宣告獨立的創意天地，充滿街頭藝術與咖啡廳。',
         descKo: '빌뉴스의 보헤미안 예술 구역, 독립을 선언한 창의적인 공간으로 거리 예술과 카페로 가득.',
@@ -46,25 +54,30 @@ const cityData = {
     ],
     restaurants: [
       {
-        nameZh: 'Lokys', nameKo: '로키스', nameEn: 'Lokys',
-        descZh: '傳統立陶宛野味料理，酒窖環境，必點野豬和馴鹿料理。',
-        descKo: '전통 리투아니아 야생 요리, 와인 셀러 분위기, 멧돼지와 순록 요리 필수.',
-        descEn: 'Traditional Lithuanian wild game in a cellar setting. Must-try: wild boar and reindeer dishes.',
+        nameZh: 'Etno Dvaras', nameKo: '에트노 드바라스', nameEn: 'Etno Dvaras',
+        descZh: '立陶宛傳統料理入門首選！必點 Cepelinai（馬鈴薯餃）、甜菜湯、蘑菇醬馬鈴薯。',
+        descKo: '리투아니아 전통 요리 입문 최고의 선택! Cepelinai(감자 만두), 비트 수프, 버섯 소스 감자 필수 주문.',
+        descEn: 'The go-to introduction to Lithuanian cuisine! Must-order: Cepelinai (potato dumplings), beet soup.',
         img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80',
-        badge1: '€25–35', badge1Type: 'amber', badge2: 'Must Try', badge2Type: 'purple'
+        badge1: '€15–25', badge1Type: 'green', badge2: 'Traditional', badge2Type: 'blue'
       },
       {
-        nameZh: 'Sweet Root', nameKo: '스위트 루트', nameEn: 'Sweet Root',
-        descZh: '新北歐料理，米其林候選，以在地食材創作季節性菜單。',
-        descKo: '새로운 북유럽 요리, 미슐랭 후보, 현지 식재료로 만든 계절 메뉴.',
-        descEn: 'New Nordic cuisine, Michelin-candidate. Seasonal menu using local and foraged ingredients.',
-        img: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3b84?w=600&q=80',
-        badge1: '€40–60', badge1Type: 'amber', badge2: 'Fine Dining', badge2Type: 'purple'
+        nameZh: 'Lokys', nameKo: '로키스', nameEn: 'Lokys',
+        descZh: '中世紀風格人氣餐廳，傳統立陶宛野味料理，酒窖環境氛圍絕佳。',
+        descKo: '중세 스타일 인기 레스토랑. 전통 리투아니아 야생 요리, 와인 셀러 분위기.',
+        descEn: 'Popular medieval-style restaurant with traditional Lithuanian wild game. Atmospheric cellar setting.',
+        img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80',
+        badge1: '€25–35', badge1Type: 'amber', badge2: 'Must Try', badge2Type: 'purple'
       },
     ],
     stays: [
-      { nameZh: 'Jimmy Jumps House', price: '€20–30/晚', note: '老城區青旅，背包客首選', icon: '🏠' },
-      { nameZh: 'Modus Hotel', price: '€50–65/晚', note: 'CP值高，設計感', icon: '🏨' },
+      {
+        nameZh: 'Panorama Hotel', nameKo: '파노라마 호텔', nameEn: 'Panorama Hotel',
+        price: { zh: '已確認訂房 ✓', ko: '예약 확정 ✓', en: 'Confirmed ✓' },
+        note: { zh: 'Sodu str. 14 · 4/16–4/18 · 2晚 · Agoda #648863979', ko: 'Sodu str. 14 · 4/16–4/18 · 2박 · Agoda #648863979', en: 'Sodu str. 14 · Apr 16–18 · 2 nights · Agoda #648863979' },
+        icon: '🏨', confirmed: true,
+        sub: { zh: 'Superior Twin · 含早餐 · 旅客名：SUNJOO PARK', ko: '슈페리어 트윈 · 조식 포함 · 투숙객: SUNJOO PARK', en: 'Superior Twin · Breakfast included · Guest: SUNJOO PARK' }
+      },
     ],
     transport: [
       { icon: '✈️', titleZh: '機場 → 市區', descZh: '計程車約 €15–20，機場巴士約 €2（1 號），30–40 分鐘',
@@ -73,9 +86,9 @@ const cityData = {
       { icon: '🚌', titleZh: '市區交通', descZh: '市區可步行為主，巴士票 €1 / 日票 €3',
         titleKo: '시내 교통', descKo: '시내는 주로 도보, 버스 €1 / 1일권 €3',
         titleEn: 'City Transport', descEn: 'Most sights walkable. Bus €1 per ride, day pass €3' },
-      { icon: '🚌', titleZh: '前往里加', descZh: 'Lux Express 巴士，約 4 小時，€20–30，建議提前網路訂購',
-        titleKo: '리가로 이동', descKo: 'Lux Express 버스, 약 4시간, €20–30, 온라인 사전 예매 권장',
-        titleEn: 'To Riga', descEn: 'Lux Express bus, ~4 hours, €20–30. Book online in advance for best prices' },
+      { icon: '🚂', titleZh: '前往里加（火車）', descZh: 'LTG Link 火車 889/890，4/18 07:03 出發，11:34 抵達里加（€24/人）',
+        titleKo: '리가로 이동 (기차)', descKo: 'LTG Link 기차 889/890, 4/18 07:03 출발, 11:34 리가 도착 (€24/인)',
+        titleEn: 'To Riga (Train)', descEn: 'LTG Link Train 889/890, Apr 18 departs 07:03, arrives Riga 11:34 (€24/person)' },
     ]
   },
 
@@ -139,9 +152,9 @@ const cityData = {
       { icon: '🚌', titleZh: '市區交通', descZh: '老城區可步行，電車 €1.15 / 日票 €5',
         titleKo: '시내 교통', descKo: '구시가지는 도보 가능, 트램 €1.15 / 1일권 €5',
         titleEn: 'City Transport', descEn: 'Old Town walkable. Tram €1.15 per ride, day pass €5' },
-      { icon: '🚌', titleZh: '前往塔林', descZh: 'Lux Express 巴士，約 4.5 小時，€20–30',
-        titleKo: '탈린으로 이동', descKo: 'Lux Express 버스, 약 4.5시간, €20–30',
-        titleEn: 'To Tallinn', descEn: 'Lux Express bus, ~4.5 hours, €20–30' },
+      { icon: '🚌', titleZh: '前往塔林', descZh: 'Lux Express 巴士，4/20 15:00 出發，19:35 抵達塔林（€17/人，Platform 1，座位5&6）',
+        titleKo: '탈린으로 이동', descKo: 'Lux Express 버스, 4/20 15:00 출발, 19:35 탈린 도착 (€17/인, Platform 1, 좌석 5&6)',
+        titleEn: 'To Tallinn', descEn: 'Lux Express bus, Apr 20 departs 15:00, arrives 19:35 (€17/person, Platform 1, Seats 5&6)' },
     ]
   },
 
@@ -187,10 +200,10 @@ const cityData = {
     stays: [
       {
         nameZh: 'Citybox Tallinn City Center', nameKo: '씨티박스 탈린 시티센터', nameEn: 'Citybox Tallinn City Center',
-        price: { zh: 'TWD 3,056 / 2晚（含稅）', ko: 'TWD 3,056 / 2박 (세금 포함)', en: 'TWD 3,056 / 2 nights (incl. taxes)' },
-        note: { zh: '市中心 · 雙人房 1 大床 · 評分 8.9 · 可免費取消', ko: '시티센터 · 더블룸 1 더블베드 · 평점 8.9 · 무료 취소 가능', en: 'City centre · Double room · Rating 8.9 · Free cancellation' },
+        price: { zh: '已確認訂房 ✓（€97.20 / 2晚含稅）', ko: '예약 확정 ✓ (€97.20 / 2박 세금 포함)', en: 'Confirmed ✓ (€97.20 / 2 nights incl. taxes)' },
+        note: { zh: 'Laeva 1 · 4/20–4/22 · 2晚 · 雙人房', ko: 'Laeva 1 · 4/20–4/22 · 2박 · 더블룸', en: 'Laeva 1 · Apr 20–22 · 2 nights · Double room' },
         icon: '🏨', confirmed: true,
-        sub: { zh: '⚠️ 4/22 早上 11:30 前需到 Terminal A（距市中心約 300m）', ko: '⚠️ 4/22 오전 11:30까지 Terminal A 도착 필요 (시내 중심에서 약 300m)', en: '⚠️ Reach Terminal A by 11:30 on Apr 22 (~300m from city centre)' }
+        sub: { zh: '⚠️ 4/22 早上 11:30 前需到 Terminal A（步行約 5 分鐘）', ko: '⚠️ 4/22 오전 11:30까지 Terminal A 도착 필요 (도보 약 5분)', en: '⚠️ Reach Terminal A by 11:30 on Apr 22 (approx. 5 min walk)' }
       },
     ],
     transport: [
@@ -239,6 +252,24 @@ const cityData = {
         img: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80',
         badge1: 'Free', badge1Type: 'green', badge2: 'Shopping', badge2Type: 'blue'
       },
+      {
+        nameZh: 'Löyly Helsinki（海濱桑拿）', nameKo: '뢰일뤼 헬싱키 (해변 사우나)', nameEn: 'Löyly Helsinki (Waterfront Sauna)',
+        descZh: '赫爾辛基最時髦的海濱桑拿餐廳，芬蘭傳統桑拿體驗加絕美海景，是必訪的打卡聖地。',
+        descKo: '헬싱키에서 가장 트렌디한 해변 사우나 레스토랑. 핀란드 전통 사우나 체험과 아름다운 바다 전망을 즐길 수 있는 필수 방문 명소.',
+        descEn: 'Helsinki\'s trendiest waterfront sauna and restaurant. Experience traditional Finnish sauna with stunning sea views.',
+        img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80',
+        badge1: 'Sauna €19+', badge1Type: 'amber', badge2: 'Waterfront', badge2Type: 'blue',
+        mapUrl: 'https://maps.app.goo.gl/3YF9CVgsQL5bdRCc8'
+      },
+      {
+        nameZh: 'Kuusijärvi Old Smoke Sauna（傳統煙燻桑拿）', nameKo: '쿠우시야르비 스모크 사우나 (전통 훈제 사우나)', nameEn: 'Kuusijärvi Old Smoke Sauna',
+        descZh: '位於萬塔的百年傳統芬蘭煙燻桑拿，在湖畔享受最純粹的芬蘭體驗，4/26 早上的完美收尾！',
+        descKo: '반타에 위치한 100년 전통 핀란드 훈제 사우나. 호숫가에서 가장 순수한 핀란드 체험을 즐기세요. 4/26 아침의 완벽한 마무리!',
+        descEn: 'A century-old traditional Finnish smoke sauna by the lake in Vantaa. The perfect finale for Apr 26 morning!',
+        img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80',
+        badge1: '4/26 Morning', badge1Type: 'green', badge2: 'Near Airport', badge2Type: 'blue',
+        mapUrl: 'https://maps.app.goo.gl/o4d8nGiEmHksngzY9'
+      },
     ],
     restaurants: [
       {
@@ -259,8 +290,13 @@ const cityData = {
       },
     ],
     stays: [
-      { nameZh: 'Hostel Diana Park', price: '€30–50/晚', note: '市中心，乾淨舒適', icon: '🏠' },
-      { nameZh: 'Hotel Finn', price: '€60–70/晚', note: '市中心絕佳位置，CP值高', icon: '🏨' },
+      {
+        nameZh: 'Hostel Diana Park', nameKo: '호스텔 다이아나 파크', nameEn: 'Hostel Diana Park',
+        price: { zh: '已確認訂房 ✓（€211.50 / 4晚含稅）', ko: '예약 확정 ✓ (€211.50 / 4박 세금 포함)', en: 'Confirmed ✓ (€211.50 / 4 nights incl. taxes)' },
+        note: { zh: 'Uudenmaankatu 9 · 4/22–4/26 · 4晚 · 市中心位置', ko: 'Uudenmaankatu 9 · 4/22–4/26 · 4박 · 시내 중심', en: 'Uudenmaankatu 9 · Apr 22–26 · 4 nights · City centre location' },
+        icon: '🏠', confirmed: true,
+        sub: { zh: '步行至赫爾辛基大教堂約 10 分鐘', ko: '헬싱키 대성당까지 도보 약 10분', en: 'About 10 min walk to Helsinki Cathedral' }
+      },
     ],
     transport: [
       { icon: '🚌', titleZh: '機場 → 市區', descZh: '機場快線巴士約 35 分鐘，€5.5，或計程車約 €40',
@@ -381,6 +417,8 @@ function buildCitySection(key) {
   const attractionCards = d.attractions.map(a => {
     const name = currentLang === 'zh' ? a.nameZh : currentLang === 'ko' ? a.nameKo : a.nameEn;
     const desc = currentLang === 'zh' ? a.descZh : currentLang === 'ko' ? a.descKo : a.descEn;
+    const mapLabel = currentLang === 'zh' ? '📍 地圖' : currentLang === 'ko' ? '📍 지도' : '📍 Map';
+    const mapLink = a.mapUrl ? `<a href="${a.mapUrl}" target="_blank" rel="noopener" class="badge blue map-link">${mapLabel}</a>` : '';
     return `
       <div class="info-card">
         ${imgWithFallback(a.img, name, 'info-card-img', key)}
@@ -390,6 +428,7 @@ function buildCitySection(key) {
           <div class="info-card-meta">
             <span class="badge ${a.badge1Type}">${a.badge1}</span>
             <span class="badge ${a.badge2Type}">${a.badge2}</span>
+            ${mapLink}
           </div>
         </div>
       </div>`;

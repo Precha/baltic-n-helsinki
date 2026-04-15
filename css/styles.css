@@ -583,6 +583,8 @@ p { color: var(--gray-500); }
 .badge.blue { background: #DBEAFE; color: #1E40AF; }
 .badge.amber { background: #FEF3C7; color: #92400E; }
 .badge.purple { background: #EDE9FE; color: #5B21B6; }
+a.badge.map-link { text-decoration: none; cursor: pointer; }
+a.badge.map-link:hover { background: #BFDBFE; color: #1E3A8A; }
 
 /* Transport list */
 .transport-list { list-style: none; }
