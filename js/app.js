@@ -16,7 +16,7 @@ const cityData = {
         descZh: '俯瞰維爾紐斯全城的最佳制高點，擁有壯麗的老城區景觀。',
         descKo: '빌뉴스 도시 전체를 한눈에 볼 수 있는 최고의 전망대.',
         descEn: 'The best vantage point over Vilnius with stunning panoramic views of the UNESCO Old Town.',
-        img: 'https://images.unsplash.com/photo-1541772995-60d28c8feba3?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Gedimino_pilis_by_Augustas_Didzgalvis.jpg/800px-Gedimino_pilis_by_Augustas_Didzgalvis.jpg',
         badge1: '€5', badge1Type: 'amber', badge2: 'UNESCO', badge2Type: 'green'
       },
       {
@@ -24,7 +24,7 @@ const cityData = {
         descZh: '立陶宛最具代表性的景觀之一，建於湖中島嶼上的紅磚城堡。',
         descKo: '리투아니아의 가장 상징적인 랜드마크 중 하나로, 호수 섬 위에 세워진 붉은 벽돌 성.',
         descEn: 'One of Lithuania\'s most iconic landmarks — a red brick castle built on an island in the lake.',
-        img: 'https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Trakai_castle_2016.jpg/800px-Trakai_castle_2016.jpg',
         badge1: '€8', badge1Type: 'amber', badge2: '30min bus', badge2Type: 'blue'
       },
       {
@@ -32,7 +32,7 @@ const cityData = {
         descZh: '維爾紐斯最震撼的景觀制高點，城市＋森林＋紅屋頂全景，很多人認為比城堡塔更美。',
         descKo: '빌뉴스에서 가장 인상적인 전망 명소. 도시+숲+붉은 지붕 파노라마로 성탑보다 더 아름답다는 평도.',
         descEn: 'Arguably the most stunning viewpoint in Vilnius — city, forest, and red rooftops all in one frame.',
-        img: 'https://images.unsplash.com/photo-1541772995-60d28c8feba3?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Vilnius_three_crosses.jpg/800px-Vilnius_three_crosses.jpg',
         badge1: 'Free', badge1Type: 'green', badge2: 'Must See ⭐', badge2Type: 'purple'
       },
       {
@@ -40,7 +40,7 @@ const cityData = {
         descZh: '維爾紐斯的波希米亞藝術區，自我宣告獨立的創意天地，充滿街頭藝術與咖啡廳。',
         descKo: '빌뉴스의 보헤미안 예술 구역, 독립을 선언한 창의적인 공간으로 거리 예술과 카페로 가득.',
         descEn: 'Vilnius\'s bohemian arts district that declared itself an independent republic — full of murals, studios, and cafés.',
-        img: 'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Uzupis_2020_by_Augustas_Didzgalvis.jpg/800px-Uzupis_2020_by_Augustas_Didzgalvis.jpg',
         badge1: 'Free', badge1Type: 'green', badge2: 'Unique', badge2Type: 'purple'
       },
       {
@@ -68,6 +68,35 @@ const cityData = {
         descEn: 'Popular medieval-style restaurant with traditional Lithuanian wild game. Atmospheric cellar setting.',
         img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80',
         badge1: '€25–35', badge1Type: 'amber', badge2: 'Must Try', badge2Type: 'purple'
+      },
+    ],
+    cafes: [
+      {
+        nameZh: 'Elska Coffee', nameKo: '엘스카 커피', nameEn: 'Elska Coffee',
+        descZh: '維爾紐斯人氣精品咖啡館，舒適氛圍，必喝手沖單品。',
+        descKo: '빌뉴스의 인기 스페셜티 커피숍. 아늑한 분위기에 핸드드립 커피 추천.',
+        descEn: 'A beloved Vilnius specialty coffee spot with a cosy atmosphere and excellent single-origin brews.',
+        img: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80',
+        badge1: 'Specialty', badge1Type: 'amber', badge2: 'Cosy', badge2Type: 'green',
+        mapUrl: 'https://maps.app.goo.gl/ku9xtAqcTNZGsa9LA'
+      },
+      {
+        nameZh: 'StrangeLove Coffee', nameKo: '스트레인지러브 커피', nameEn: 'StrangeLove Coffee',
+        descZh: '極具設計感的潮流咖啡館，維爾紐斯最有型的咖啡體驗。',
+        descKo: '디자인 감각이 넘치는 트렌디한 카페. 빌뉴스에서 가장 스타일리시한 커피 경험.',
+        descEn: 'Vilnius\'s trendiest café — striking interior design with seriously good coffee.',
+        img: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80',
+        badge1: 'Trendy', badge1Type: 'purple', badge2: 'Design', badge2Type: 'blue',
+        mapUrl: 'https://maps.app.goo.gl/Tbq7CGYuSxqZrhJa7'
+      },
+      {
+        nameZh: 'Taste Map Coffee Roasters', nameKo: '테이스트맵 커피 로스터스', nameEn: 'Taste Map Coffee Roasters',
+        descZh: '立陶宛在地烘豆品牌，可購買咖啡豆帶回家，精品咖啡愛好者必訪。',
+        descKo: '리투아니아 현지 커피 로스터. 원두를 구매해 갈 수도 있어 스페셜티 커피 애호가 필수 방문.',
+        descEn: 'A local Lithuanian roastery — pick up freshly roasted beans to take home. A must for coffee lovers.',
+        img: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80',
+        badge1: 'Roastery', badge1Type: 'amber', badge2: 'Local', badge2Type: 'green',
+        mapUrl: 'https://maps.app.goo.gl/q27iraMvfGKp2LMF8'
       },
     ],
     stays: [
@@ -101,7 +130,7 @@ const cityData = {
         descZh: '歐洲最密集的新藝術風格建築群之一，精緻的立面讓人目不暇接。',
         descKo: '유럽에서 가장 밀집된 아르누보 건축 군 중 하나로, 정교한 외관이 눈을 사로잡는다.',
         descEn: 'One of Europe\'s densest concentrations of Art Nouveau architecture. The ornate facades are breathtaking.',
-        img: 'https://images.unsplash.com/photo-1467803738586-46b7eb7b16a9?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Alberta_iel%C4%81_8_to_2_20120728-1.JPG/800px-Alberta_iel%C4%81_8_to_2_20120728-1.JPG',
         badge1: 'Free', badge1Type: 'green', badge2: 'Architecture', badge2Type: 'blue'
       },
       {
@@ -109,7 +138,7 @@ const cityData = {
         descZh: '里加最具標誌性的哥德式建築，精緻的磚砌立面是打卡必備。',
         descKo: '리가에서 가장 상징적인 고딕 양식 건물로, 정교한 벽돌 외관이 인증샷 필수.',
         descEn: 'Riga\'s most iconic Gothic building with its intricate brick facade — the photo spot of the city.',
-        img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/House_of_Blackheads_Riga.jpg/800px-House_of_Blackheads_Riga.jpg',
         badge1: '€7', badge1Type: 'amber', badge2: 'UNESCO', badge2Type: 'green'
       },
       {
@@ -117,7 +146,7 @@ const cityData = {
         descZh: '前德軍飛船庫改建，歐洲最大的市場之一，充滿在地食材與活力。',
         descKo: '구 독일 군용 비행선 격납고를 개조한 유럽 최대 시장 중 하나로, 현지 식재료와 활기로 가득.',
         descEn: 'One of Europe\'s largest markets, housed in former German zeppelin hangars. A feast for the senses.',
-        img: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Riga_Central_Market_Hall.jpg/800px-Riga_Central_Market_Hall.jpg',
         badge1: 'Free', badge1Type: 'green', badge2: 'Local Life', badge2Type: 'purple'
       },
     ],
@@ -148,6 +177,26 @@ const cityData = {
         sub: { zh: '2025年翻新，Accor 旗下精品酒店，老城區核心', ko: '2025년 리노베이션, Accor 계열 부티크 호텔, 구시가지 중심', en: 'Renovated 2025 · Accor luxury brand · Heart of Old Town' }
       },
     ],
+    cafes: [
+      {
+        nameZh: 'KALVE Coffee Living Room', nameKo: '칼베 커피 리빙룸', nameEn: 'KALVE Coffee Living Room',
+        descZh: '里加精品咖啡代表，舒適客廳氛圍，嚴選單品與手沖咖啡。',
+        descKo: '리가 스페셜티 커피의 상징. 거실 같은 아늑한 분위기에 엄선된 싱글 오리진 커피.',
+        descEn: 'Riga\'s leading specialty coffee destination — living-room comfort with meticulously sourced beans.',
+        img: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80',
+        badge1: 'Specialty', badge1Type: 'amber', badge2: 'Local Fav', badge2Type: 'purple',
+        mapUrl: 'https://maps.app.goo.gl/g1yF1UhNzrx1vby86'
+      },
+      {
+        nameZh: 'LIDO Alus sēta', nameKo: '리도 알루스 세타', nameEn: 'LIDO Alus sēta',
+        descZh: '里加著名的拉脫維亞傳統飲食廣場，自助式在地料理配自釀啤酒，高CP值必嚐。',
+        descKo: '리가의 유명한 라트비아 전통 푸드홀. 셀프서비스 현지 요리와 하우스 맥주, 가성비 최고.',
+        descEn: 'Riga\'s famous Latvian food hall — self-service traditional dishes and house-brewed beer. Great value.',
+        img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80',
+        badge1: 'Budget', badge1Type: 'green', badge2: 'Traditional', badge2Type: 'blue',
+        mapUrl: 'https://maps.app.goo.gl/i5iXmTVvYFvgds93A'
+      },
+    ],
     transport: [
       { icon: '🚌', titleZh: '市區交通', descZh: '老城區可步行，電車 €1.15 / 日票 €5',
         titleKo: '시내 교통', descKo: '구시가지는 도보 가능, 트램 €1.15 / 1일권 €5',
@@ -167,7 +216,7 @@ const cityData = {
         descZh: '俯瞰塔林紅屋頂老城的最佳視角，設有多個觀景台，是愛沙尼亞議會所在地。',
         descKo: '탈린 붉은 지붕 구시가지를 내려다보는 최고의 전망지로, 에스토니아 의회가 위치.',
         descEn: 'The best viewpoint over Tallinn\'s red-roofed Old Town, home to the Estonian Parliament.',
-        img: 'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Tallinn_Toompea_Upper_Old_Town_2013.jpg/800px-Tallinn_Toompea_Upper_Old_Town_2013.jpg',
         badge1: 'Free', badge1Type: 'green', badge2: 'UNESCO', badge2Type: 'green'
       },
       {
@@ -175,7 +224,7 @@ const cityData = {
         descZh: '俄羅斯東正教大教堂，洋蔥圓頂在老城中格外顯眼，內部裝飾金碧輝煌。',
         descKo: '러시아 정교회 대성당, 양파 돔이 구시가지에서 눈에 띄며 내부 장식은 화려하다.',
         descEn: 'Russian Orthodox cathedral with striking onion domes. The gilded interior is magnificent.',
-        img: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Catedral_de_Alejandro_Nevsky%2C_Tallin%2C_Estonia%2C_2012-08-11%2C_DD_46.JPG/800px-Catedral_de_Alejandro_Nevsky%2C_Tallin%2C_Estonia%2C_2012-08-11%2C_DD_46.JPG',
         badge1: 'Free', badge1Type: 'green', badge2: 'Architecture', badge2Type: 'blue'
       },
       {
@@ -183,7 +232,7 @@ const cityData = {
         descZh: '塔林中世紀城牆的標誌性入口，周邊咖啡廳和工藝品商店林立。',
         descKo: '탈린 중세 성벽의 상징적인 입구로, 주변에 카페와 공예품 상점이 즐비.',
         descEn: 'The iconic gateway to Tallinn\'s medieval walled city, lined with craft shops and cafés.',
-        img: 'https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Old_Town_of_Tallinn%2C_Tallinn%2C_Estonia_-_panoramio_%2858%29.jpg/800px-Old_Town_of_Tallinn%2C_Tallinn%2C_Estonia_-_panoramio_%2858%29.jpg',
         badge1: 'Free', badge1Type: 'green', badge2: 'Medieval', badge2Type: 'blue'
       },
     ],
@@ -206,6 +255,26 @@ const cityData = {
         sub: { zh: '⚠️ 4/22 早上 11:30 前需到 Terminal A（步行約 5 分鐘）', ko: '⚠️ 4/22 오전 11:30까지 Terminal A 도착 필요 (도보 약 5분)', en: '⚠️ Reach Terminal A by 11:30 on Apr 22 (approx. 5 min walk)' }
       },
     ],
+    cafes: [
+      {
+        nameZh: 'Røst Tallinn', nameKo: '뢰스트 탈린', nameEn: 'Røst Tallinn',
+        descZh: '塔林最受好評的精品咖啡館，北歐簡約設計，出色的手沖與義式咖啡。',
+        descKo: '탈린 최고 평점의 스페셜티 커피숍. 북유럽 미니멀 인테리어에 핸드드립·에스프레소 모두 훌륭.',
+        descEn: 'Tallinn\'s top-rated specialty café — Nordic minimalism, excellent pour-overs and espresso drinks.',
+        img: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80',
+        badge1: 'Specialty', badge1Type: 'amber', badge2: 'Nordic', badge2Type: 'blue',
+        mapUrl: 'https://maps.app.goo.gl/3FMdWQv2h37dWjvLA'
+      },
+      {
+        nameZh: 'Kohvik Klaus', nameKo: '코흐비크 클라우스', nameEn: 'Kohvik Klaus',
+        descZh: '老城區隱藏咖啡館，以在地甜點和自家烘焙咖啡聞名，氣氛溫馨愜意。',
+        descKo: '구시가지에 숨겨진 카페. 현지 디저트와 직접 로스팅한 커피로 유명하며 분위기 아늑.',
+        descEn: 'A hidden gem in the Old Town known for local pastries and house-roasted coffee. Warm and inviting.',
+        img: 'https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80',
+        badge1: 'Hidden Gem', badge1Type: 'purple', badge2: 'Pastries', badge2Type: 'green',
+        mapUrl: 'https://maps.app.goo.gl/fU5mW5hq9qmrVkwt5'
+      },
+    ],
     transport: [
       { icon: '🚶', titleZh: '市區交通', descZh: '老城區可完全步行，景點距離很近',
         titleKo: '시내 교통', descKo: '구시가지는 완전히 도보 가능, 관광지 간 거리가 매우 가깝다',
@@ -225,7 +294,7 @@ const cityData = {
         descZh: 'UNESCO 世界文化遺產，坐船 15 分鐘即可抵達，島上要塞景觀絕美。',
         descKo: 'UNESCO 세계 문화 유산, 보트로 15분이면 도착, 섬의 요새 경관이 절경.',
         descEn: 'UNESCO World Heritage island fortress accessible by a 15-minute ferry. Stunning sea views.',
-        img: 'https://images.unsplash.com/photo-1538332576228-eb5b4c4de6f5?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Suomenlinna_aerial.JPG/800px-Suomenlinna_aerial.JPG',
         badge1: '€3.5', badge1Type: 'amber', badge2: 'UNESCO', badge2Type: 'green'
       },
       {
@@ -233,7 +302,7 @@ const cityData = {
         descZh: '直接鑿入花崗岩建造的教堂，自然採光和音響效果絕佳，建築奇觀。',
         descKo: '화강암을 직접 깎아 만든 교회로, 자연 채광과 음향 효과가 뛰어난 건축 기적.',
         descEn: 'A church carved directly into solid granite bedrock. Natural lighting and acoustics are extraordinary.',
-        img: 'https://images.unsplash.com/photo-1560969184-10fe8719e047?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Temppeliaukio_Church_Helsinki.jpg/800px-Temppeliaukio_Church_Helsinki.jpg',
         badge1: '€3', badge1Type: 'amber', badge2: 'Unique', badge2Type: 'purple'
       },
       {
@@ -241,7 +310,7 @@ const cityData = {
         descZh: '新古典主義白色大教堂，俯瞰赫爾辛基參議院廣場，是城市最具代表性的地標。',
         descKo: '신고전주의 흰색 대성당, 헬싱키 원로원 광장을 내려다보는 도시의 가장 상징적인 랜드마크.',
         descEn: 'Neoclassical white cathedral overlooking Senate Square. The defining landmark of Helsinki.',
-        img: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&q=80',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Kirkko3.png/800px-Kirkko3.png',
         badge1: 'Free', badge1Type: 'green', badge2: 'Landmark', badge2Type: 'blue'
       },
       {
@@ -308,6 +377,35 @@ const cityData = {
       { icon: '⛴️', titleZh: '前往芬蘭堡', descZh: '市集廣場搭渡輪，約 15 分鐘，使用 HSL 交通卡或購票 €3.5',
         titleKo: '수오멘린나 이동', descKo: '마켓 광장에서 페리, 약 15분, HSL 교통카드 또는 €3.5 구매',
         titleEn: 'To Suomenlinna', descEn: 'Ferry from Market Square, ~15 min. HSL card valid or buy ticket €3.5' },
+    ],
+    cafes: [
+      {
+        nameZh: 'Kaffa Roastery', nameKo: '카파 로스터리', nameEn: 'Kaffa Roastery',
+        descZh: '赫爾辛基精品咖啡先驅，自家烘豆，以精準的沖煮和可持續採購著稱。',
+        descKo: '헬싱키 스페셜티 커피의 선구자. 직접 로스팅, 정확한 추출과 지속 가능한 원두 소싱으로 유명.',
+        descEn: 'Helsinki\'s pioneering specialty roastery — house-roasted beans, precision brewing, sustainably sourced.',
+        img: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&q=80',
+        badge1: 'Roastery', badge1Type: 'amber', badge2: 'Pioneer', badge2Type: 'purple',
+        mapUrl: 'https://maps.app.goo.gl/o2J8Z9AqeN8YfVpF7'
+      },
+      {
+        nameZh: 'Fazer Café', nameKo: '파제르 카페', nameEn: 'Fazer Café',
+        descZh: '芬蘭國民品牌 Fazer 的旗艦咖啡廳，必嚐世界知名的藍色巧克力與卡瑞利亞派。',
+        descKo: '핀란드 국민 브랜드 Fazer의 플래그십 카페. 세계적으로 유명한 블루 초콜릿과 카렐리아 파이 필수.',
+        descEn: 'Flagship café of Finland\'s beloved Fazer brand. Try the iconic blue chocolate and Karelian pies.',
+        img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80',
+        badge1: 'Iconic', badge1Type: 'blue', badge2: 'Finnish', badge2Type: 'green',
+        mapUrl: 'https://maps.app.goo.gl/7RK9QM1TgGvSFXNw5'
+      },
+      {
+        nameZh: 'Café Regatta', nameKo: '카페 레가타', nameEn: 'Café Regatta',
+        descZh: '海邊小木屋咖啡館，赫爾辛基最浪漫的咖啡體驗，供應肉桂卷與熱可可。',
+        descKo: '해변의 작은 통나무 카페. 헬싱키에서 가장 낭만적인 커피 경험. 시나몬 롤과 핫초코 추천.',
+        descEn: 'A tiny seaside log-cabin café — Helsinki\'s most romantic coffee spot. Cinnamon rolls and hot cocoa.',
+        img: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80',
+        badge1: 'Scenic', badge1Type: 'green', badge2: 'Cosy', badge2Type: 'amber',
+        mapUrl: 'https://maps.app.goo.gl/pP9XMCv4dCi7YfLq9'
+      },
     ]
   }
 };
@@ -318,7 +416,6 @@ function buildPage() {
   try { buildOverview(); } catch(e) { console.warn('buildOverview', e); }
   try { buildTimeline(); } catch(e) { console.warn('buildTimeline', e); }
   try { buildCitySections(); } catch(e) { console.warn('buildCitySections', e); }
-  try { buildCost(); } catch(e) { console.warn('buildCost', e); }
   try { buildFooter(); } catch(e) { console.warn('buildFooter', e); }
   applyStaticTranslations(); // Re-apply at end to catch any late-rendered elements
 }
@@ -419,6 +516,28 @@ function buildCitySection(key) {
   const title = t.cityTitles[key];
   const countryEmoji = { vilnius: '🇱🇹 Lithuania', riga: '🇱🇻 Latvia', tallinn: '🇪🇪 Estonia', helsinki: '🇫🇮 Finland' };
 
+  const cafeCards = (d.cafes || []).length > 0
+    ? (d.cafes || []).map(c => {
+        const name = currentLang === 'zh' ? c.nameZh : currentLang === 'ko' ? c.nameKo : c.nameEn;
+        const desc = currentLang === 'zh' ? c.descZh : currentLang === 'ko' ? c.descKo : c.descEn;
+        const mapLabel = currentLang === 'zh' ? '📍 地圖' : currentLang === 'ko' ? '📍 지도' : '📍 Map';
+        const mapLink = c.mapUrl ? `<a href="${c.mapUrl}" target="_blank" rel="noopener" class="badge blue map-link">${mapLabel}</a>` : '';
+        return `
+          <div class="info-card">
+            ${imgWithFallback(c.img, name, 'info-card-img', key)}
+            <div class="info-card-body">
+              <div class="info-card-name">${name}</div>
+              <div class="info-card-desc">${desc}</div>
+              <div class="info-card-meta">
+                <span class="badge ${c.badge1Type}">${c.badge1}</span>
+                <span class="badge ${c.badge2Type}">${c.badge2}</span>
+                ${mapLink}
+              </div>
+            </div>
+          </div>`;
+      }).join('')
+    : `<p style="color:var(--text-muted);padding:1rem 0;">${currentLang === 'zh' ? '更多咖啡廳推薦陸續新增' : currentLang === 'ko' ? '더 많은 카페 추천 추가 예정' : 'More café recommendations coming soon'}</p>`;
+
   const attractionCards = d.attractions.map(a => {
     const name = currentLang === 'zh' ? a.nameZh : currentLang === 'ko' ? a.nameKo : a.nameEn;
     const desc = currentLang === 'zh' ? a.descZh : currentLang === 'ko' ? a.descKo : a.descEn;
@@ -510,6 +629,7 @@ function buildCitySection(key) {
         <div class="city-tabs">
           <button class="city-tab active" data-tab="attractions">${t.sectionAttractions}</button>
           <button class="city-tab" data-tab="food">${t.sectionFood}</button>
+          <button class="city-tab" data-tab="cafe">${t.sectionCafe}</button>
           <button class="city-tab" data-tab="stay">${t.sectionStay}</button>
           <button class="city-tab" data-tab="transport">${t.sectionTransport}</button>
         </div>
@@ -518,6 +638,9 @@ function buildCitySection(key) {
         </div>
         <div class="city-tab-panel" data-panel="food">
           <div class="cards-grid">${restaurantCards}</div>
+        </div>
+        <div class="city-tab-panel" data-panel="cafe">
+          <div class="cards-grid">${cafeCards}</div>
         </div>
         <div class="city-tab-panel" data-panel="stay">
           <div class="stay-list">${stayCards}</div>
@@ -574,7 +697,7 @@ function applyStaticTranslations() {
     if (t[key] !== undefined) el.textContent = t[key];
   });
   // Explicit nav items (belt-and-suspenders)
-  ['navOverview','navTimeline','navVilnius','navRiga','navTallinn','navHelsinki','navCost'].forEach(key => {
+  ['navOverview','navTimeline','navVilnius','navRiga','navTallinn','navHelsinki'].forEach(key => {
     const el = document.querySelector(`[data-i18n="${key}"]`);
     if (el && t[key]) el.textContent = t[key];
   });
@@ -589,7 +712,6 @@ function applyLang() {
   try { buildOverview(); } catch(e) { console.warn('buildOverview', e); }
   try { buildTimeline(); } catch(e) { console.warn('buildTimeline', e); }
   try { buildCitySections(); } catch(e) { console.warn('buildCitySections', e); }
-  try { buildCost(); } catch(e) { console.warn('buildCost', e); }
   try { buildFooter(); } catch(e) { console.warn('buildFooter', e); }
   // Restore tab events
   document.querySelectorAll('.city-tab').forEach(tab => {
